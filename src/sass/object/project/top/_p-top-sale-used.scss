@@ -1,0 +1,103 @@
+@use 'global' as *;
+
+.p-top-sale-used {
+	z-index: 1;
+	background: url(../images/top/top_sale-used-bg01.jpg) no-repeat center center / cover;
+	position: relative;
+	padding: rem(12) 0 rem(35);
+	@include mq('md') {
+		padding: rem(20) 0 rem(44);
+	}
+}
+.p-top-sale-used::before {
+	position: absolute;
+	content: '';
+	background: rgba(#fff, 0.8) no-repeat center center / cover;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -10;
+}
+.p-top-sale-used__container {
+	z-index: 100;
+	padding: 0 rem(10);
+	margin-right: rem(-10);
+	@include mq('md') {
+		padding: 0 rem(20);
+	}
+}
+.p-top-sale-used__content {
+	z-index: 100;
+	margin-top: rem(20);
+	@include mq('md') {
+		margin-top: rem(40);
+	}
+}
+// .p-top-sale-used__cards {
+// }
+.p-top-sale-used__card {
+	width: 100%;
+	background: $white;
+	border: 1px solid $sub-color;
+	max-width: rem(342);
+	padding: rem(12);
+	@include mq('md') {
+		padding: rem(20);
+	}
+}
+.p-top-sale-used__card-img {
+	width: 100%;
+	@include mq('md') {
+		max-width: rem(302);
+	}
+}
+.p-top-sale-used__card-content {
+	margin-top: rem(8);
+	@include mq('md') {
+		margin-top: rem(20);
+	}
+}
+.p-top-sale-used__card-title {
+	color: $sub-color;
+	font-size: rem(16);
+	font-weight: 700;
+	text-align: center;
+	@include mq('md') {
+		font-size: rem(20);
+	}
+}
+.p-top-sale-used__card-table {
+	margin-top: rem(10);
+	@include mq('md') {
+		margin-top: rem(24);
+	}
+}
+.p-top-sale-used__card-row {
+	display: flex;
+	align-items: top;
+}
+.p-top-sale-used__card-head {
+	font-size: rem(14);
+	font-weight: 400;
+	vertical-align: top;
+	text-align-last: justify;
+	width: rem(85);
+	@include mq('md') {
+		font-size: rem(16);
+	}
+	@media (min-width: 769px) and (max-width: 950px) {
+		width: rem(120);
+	}
+	@media (min-width: 951px) and (max-width: 1150px) {
+		width: rem(100);
+	}
+}
+.p-top-sale-used__card-data {
+	font-size: rem(14);
+	font-weight: 400;
+	@include mq('md') {
+		font-size: rem(16);
+	}
+}

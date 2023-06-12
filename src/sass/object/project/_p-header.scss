@@ -1,0 +1,121 @@
+@use 'global' as *;
+
+.p-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: $white;
+	background: $main-color;
+	width: 100%;
+	z-index: 300;
+	height: rem(50);
+	@include mq('md') {
+		height: rem(80);
+		// padding: rem(10) 0;
+	}
+}
+.p-header__container {
+	height: inherit;
+	@include mq('md') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.p-header__left {
+	display: none;
+	@include mq('md') {
+		height: inherit;
+		display: block;
+		margin-left: rem(-23);
+	}
+	@media (max-width: 900px) {
+		margin-left: rem(-16);
+	}
+}
+.p-header__nav {
+	height: inherit;
+}
+.p-header__nav-list {
+	display: flex;
+	align-items: center;
+	height: inherit;
+}
+.p-header__item {
+	height: inherit;
+}
+.p-header__link {
+	display: flex;
+	align-items: center;
+	height: inherit;
+	padding: 0 rem(23);
+	font-size: rem(18);
+	position: relative;
+	@media (max-width: 800px) {
+		padding: 0 rem(8);
+	}
+	@media (max-width: 900px) {
+		padding: 0 rem(16);
+	}
+}
+.p-header__link:hover {
+	color: $sub-color;
+}
+.p-header__link::after {
+	position: absolute;
+	content: '';
+	background: $sub-color;
+	display: inline-block;
+	bottom: rem(16);
+	left: 10%;
+	height: rem(3);
+	width: 80%;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s;
+}
+.p-header__link:hover::after {
+	transform: scale(1, 1);
+}
+.p-header__right {
+	display: none;
+	@include mq('md') {
+		height: inherit;
+		display: flex;
+		align-items: center;
+		padding: rem(10) 0;
+		margin-right: rem(-10);
+	}
+}
+.p-header__btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: rem(18);
+	border: rem(3) solid $white;
+	border-radius: 35px;
+	width: rem(180);
+	padding: rem(15) rem(30) rem(15) rem(25);
+	margin-right: rem(10);
+	cursor: pointer;
+	transition: all 0.3s;
+	@include mq('md') {
+		font-size: rem(18);
+		width: rem(180);
+		padding: rem(15) rem(30) rem(15) rem(25);
+		margin-right: rem(10);
+	}
+	@media (max-width: 900px) {
+		width: rem(170);
+		padding: rem(15) rem(15) rem(15) rem(12);
+	}
+}
+.p-header__btn:hover {
+	background: $sub-color;
+}
+.p-header__btn-icon {
+	@include mq('md') {
+		width: rem(30);
+	}
+}

@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.c-head {
+	text-align: center;
+}
+.c-head__title {
+	color: $sub-color;
+	font-size: rem(32);
+	// letter-spacing: 0.01em;
+	font-weight: 900;
+	@include mq('md') {
+		font-size: rem(40);
+	}
+}
+.c-head__lead {
+	color: $text-color;
+	font-size: rem(16);
+	// letter-spacing: 0.01em;
+	font-weight: 700;
+	@include mq('md') {
+		margin-top: rem(20);
+	}
+}

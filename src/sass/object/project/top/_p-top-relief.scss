@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.p-top-relief {
+	background: url(../images/top/top_relief-bg01.jpg) no-repeat center center / cover;
+	position: relative;
+	z-index: 1;
+	padding: rem(60) 0;
+	@include mq('md') {
+		padding: rem(137) 0 rem(136);
+	}
+}
+.p-top-relief::before {
+	position: absolute;
+	content: '';
+	background: rgba($white, 0.8);
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+// .p-top-relief__container {
+// }
+.p-top-relief__text {
+	z-index: 100;
+	color: $text-color;
+	font-size: rem(20);
+	font-weight: 700;
+	text-align: center;
+	@include mq('md') {
+		font-size: rem(40);
+	}
+}
+.p-top-relief__text--yellow {
+	color: #ffee04;
+	font-size: rem(30);
+	@include mq('md') {
+		font-size: rem(60);
+	}
+}

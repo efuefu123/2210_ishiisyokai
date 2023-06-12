@@ -1,0 +1,40 @@
+@use 'global' as *;
+
+.l-hamburger {
+	position: fixed;
+	top: rem(14);
+	right: rem(24);
+	width: rem(40);
+	height: rem(25);
+	z-index: 500;
+	transition: all 0.3s ease-in-out;
+	@include mq('md') {
+		display: none;
+	}
+}
+.l-hamburger-line {
+	background: $white;
+	max-width: rem(40);
+	width: 100%;
+	height: rem(3);
+	display: block;
+	transition: all 0.01s ease-in-out;
+}
+.l-hamburger-line02,
+.l-hamburger-line03 {
+	margin-top: rem(6);
+}
+.l-hamburger.is-active .l-hamburger-line01 {
+	-webkit-transform: translate(0px, 0.625rem) rotate(45deg);
+	-moz-transform: translate(0px, 0.625rem) rotate(45deg);
+	transform: translate(0px, 0.625rem) rotate(45deg);
+	transition: all 0.3s ease-in-out;
+}
+.l-hamburger.is-active .l-hamburger-line02 {
+	display: none;
+	transition: all 0.3s ease-in-out;
+}
+.l-hamburger.is-active .l-hamburger-line03 {
+	transform: translate(0px, 0px) rotate(-45deg);
+	transition: all 0.3s ease-in-out;
+}

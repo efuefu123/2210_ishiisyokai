@@ -1,0 +1,51 @@
+@use 'global' as *;
+
+// .p-top-review {
+// }
+.p-top-review__container {
+	padding: 0 rem(10);
+	@include mq('md') {
+		padding: 0 rem(20);
+	}
+}
+.p-top-review__content {
+	margin-top: rem(20);
+	@include mq('md') {
+		margin-top: rem(40);
+	}
+}
+// .p-top-review__cards {
+// }
+.p-top-review__card {
+	width: 100%;
+	background: $white;
+	border: 1px solid $sub-color;
+	max-width: rem(342);
+	padding: rem(12);
+	@include mq('md') {
+		padding: rem(20);
+	}
+}
+.p-top-review__card-title {
+	color: $sub-color;
+	font-size: rem(16);
+	font-weight: 700;
+	text-align: center;
+	@include mq('md') {
+		font-size: rem(20);
+	}
+}
+.p-top-review__card-text {
+	color: $text-color;
+	font-size: rem(14);
+	@include mq('md') {
+		font-size: rem(16);
+	}
+}
+
+.p-top-review__card-text:nth-of-type(1) {
+	margin-top: rem(10);
+	@include mq('md') {
+		margin-top: rem(20);
+	}
+}

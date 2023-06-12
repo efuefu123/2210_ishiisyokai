@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+.p-top__fv {
+	margin-top: rem(50);
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}
+
+.p-top-service,
+.p-top-lease-rental,
+.p-top-sale-used,
+.p-top-review,
+.p-top-estimate,
+.p-top-relief {
+	margin-top: rem(40);
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}
+.p-top-company {
+	margin-top: rem(60);
+	@include mq('md') {
+		margin-top: rem(122);
+	}
+}

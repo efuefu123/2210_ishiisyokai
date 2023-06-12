@@ -1,0 +1,88 @@
+@use 'global' as *;
+
+.l-drawer-menu {
+	position: fixed;
+	width: 60%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	background-color: rgba($main-color, 0.9);
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+	transition: 0.2s all ease-in-out;
+	color: $white;
+	@include mq('md') {
+		display: none;
+	}
+}
+.l-drawer-menu__container {
+	padding: rem(70) rem(10) rem(10) rem(16);
+}
+.l-drawer-menu.is-active {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+	transition: 0.3s all ease-in-out;
+}
+.l-drawer-menu__list {
+	margin-top: rem(20);
+}
+.l-drawer-menu__item {
+	font-size: rem(16);
+	letter-spacing: 0.3em;
+	position: relative;
+}
+.l-drawer-menu__item:not(:first-child) {
+	margin-top: rem(20);
+}
+.l-drawer-menu__link {
+	display: block;
+	padding: rem(6) 0;
+	border-bottom: 1px solid #fff;
+	transition: all 0.3s;
+	position: relative;
+}
+.l-drawer-menu__link:hover {
+	color: $sub-color;
+}
+.l-drawer-menu__link::after {
+	position: absolute;
+	content: '';
+	background: $sub-color;
+	display: inline-block;
+	bottom: -1px;
+	left: 0;
+	height: 1px;
+	width: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: transform 0.3s;
+}
+.l-drawer-menu__link:hover::after {
+	transform: scale(1, 1);
+}
+.l-drawer-menu__btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	max-width: rem(150);
+	border: 2px solid $white;
+	border-radius: 35px;
+	padding: rem(6) rem(8);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.l-drawer-menu__btn:hover {
+	background: $sub-color;
+}
+.l-drawer-menu__btn-icon {
+	width: rem(24);
+}
+
+/*# individual
+-----------------------------------*/
+.l-drawer-menu__list li.l-drawer-menu__item--mt {
+	margin-top: rem(36);
+}
